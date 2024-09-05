@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "markdown-service"
+version = "0.1.0"
+description = "A FastAPI backend to serve markdown files with collections, tags, and versioning."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.95.0"  # FastAPI for building the API
+pydantic = "^1.10.0"  # Pydantic for data validation and modeling
+PyYAML = "^6.0"  # YAML parsing for metadata in markdown files
+markdown = "^3.3.7"  # Markdown rendering
+
+# Optional: If you plan to use PostgreSQL later, include asyncpg or psycopg2
+# asyncpg = "^0.26.0"
+# psycopg2-binary = "^2.9.3"
+
+[tool.poetry.dev-dependencies]
+uvicorn = "^0.21.1"  # Uvicorn for running the FastAPI app
+pytest = "^7.3.0"  # Pytest for testing
+pytest-asyncio = "^0.20.0"  # For testing asynchronous code in FastAPI
+black = "^23.3.0"  # Black for code formatting
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
