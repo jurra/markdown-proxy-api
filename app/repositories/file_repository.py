@@ -49,7 +49,7 @@ class FileRepository(BaseRepository):
         return MarkdownFile(
             id=meta_data['id'],
             title=meta_data['title'],
-            content=markdown.markdown(md_content),
+            content=md_content,
             tags=meta_data['tags'],
             version=meta_data['version'],
             created_at=meta_data['created_at'],
